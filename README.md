@@ -3,7 +3,6 @@
 Welcome to the Responsive Mario Game Home Page project! This web page serves as a landing page for the famous Mario game. It features a responsive design and aims to provide users with a nostalgic and engaging experience.
 
 ## Preview
-## Preview
 
 ![Mario Game Preview](https://github.com/rye2x/Mario-HomePage/blob/main/Mario_HomePage/img/Screenshot%202023-11-19%20at%2021-49-32%20MARIOCLUB.png)
 
