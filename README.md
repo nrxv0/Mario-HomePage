@@ -5,7 +5,7 @@ Welcome to the Responsive Mario Game Home Page project! This web page serves as 
 ## Preview
 ## Preview
 
-![Mario Game Preview](https://example.com/path/to/your/image.png)
+![Mario Game Preview](https://github.com/rye2x/Mario-HomePage/blob/main/Mario_HomePage/img/Screenshot%202023-11-19%20at%2021-49-32%20MARIOCLUB.png)
 
 ## Overview
 
