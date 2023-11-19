@@ -1,0 +1,290 @@
+body ,h1 ,a ,ul ,li{
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+}
+header{
+    /* position:relative; */
+    /* left: 100px;
+    top: 100px; */
+    /* this means it's gonna shit the header 100px from the left to the rigght 
+    - shift from the top to the bottom by 100px*/
+    color: white;
+    background-color: #f63232;
+    text-align: center;
+    padding: 3px;
+    width: 100%;
+    position: fixed;
+    /* fixed : so when u scroll tht elements stays visible in its place , for ex the header */
+    top: 0;
+    left: 0;
+    /* cuz there was white sace between the header and the end of the page */
+    z-index: 1;
+    /* to make the element on other elements , cuz it was under the image(by giving it a positive value)
+    (make it under , by giving it a negative value) */
+}
+header h1{
+    border: 8px solid white;
+    border-radius: 36px;
+    display: inline-block;
+    /* inline block : takes the space of the emenet, but block : takes the whole line in the page */
+    padding: 6px 12px;
+    /* 12 from left and right - 6 from top and bottom */
+}
+/* Elements are then positioned using the top, bottom, left, and right properties. However, these properties will not work unless the position property is set first. 
+They also work differently depending on the position value. */
+/* position: static;
+
+HTML elements are positioned static by default.
+
+Static positioned elements are not affected by the top, bottom, left, 
+and right properties.
+
+An element with position: static; is not positioned in any special way;
+ it is always positioned according to the normal flow of the page:.*/
+
+ .banner{
+    position: relative;
+ }
+ /* to make a position for the child , u need to make sure that the parent has a position type , not static
+ - for ex here to position relatively the welco to mario which is a child of .class banner 
+ make the banner class : psition: relative for ex
+  */
+ .banner img{
+    max-width: 100%;
+ }
+ .banner .welcome{
+    position: absolute;
+    /* bottom: 200px;
+    when the page is zoomed out , the image get smaller, but the welcome stayes in its place whitout changing with the image*/
+    bottom: 30%;
+    left: 0;
+    color: white;
+    background-color: #feb614;
+ }
+ .banner h2{
+    font-size: 40px;
+ }
+ .banner h2 span{
+    font-size: 1.2em;
+    /* or : font-size: 1.2em; means the font size is 1.2 bigger than the font of the parent (H2 here) */
+ }
+ /* nav : that contains the links : contact , home ... as a list */
+ nav{
+background-color: #f4F4F4;
+padding: 20px;
+position: sticky;
+top : 70px;
+/* when u are scrolling and reach 148PX , the nav bar stops and stays visible */
+ }
+nav ul{
+    white-space: nowrap;
+    /* The white-space property specifies how white-space inside an element is handled.
+    -Sequences of whitespace will collapse into a single whitespace. Text will never wrap to the next line.
+     The text continues on the same line until a <br> tag is encountered
+    */
+    /*  we used it cuz an elements were under the other , even when we used 25% , because of the withspace */
+    max-width: 1200px;
+    /* The max-width property defines the maximum width of an element. */
+    margin: 0 auto;
+    /*  0 TOP AND BOTTOM? auto : left and right , any left over space apply it both sides right nd left
+    so it essentialize it in the middle */
+}
+ nav li{
+    display: inline-block;
+    width: 25%;
+    /* we have 4 links , so 100/4 */
+    font-size: 24px;
+ }
+ nav li a{
+    color: #4B4B4B;
+    text-decoration: none;
+ }
+ nav li a.join{
+    color: #f63232;
+ }
+
+main{
+    max-width: 100%;
+    width: 1200px;
+    margin: 80px auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+    /* so that the padding size is included in the 100% */
+}
+article h2{
+    color: #f63232;
+    font-size: 48px;
+}
+article p{
+    line-height: 2em;
+    /* height between lines
+    2em : means parents size multiple 2 */
+    color: #4B4B4B;
+}
+
+.images{
+    text-align: center;
+    margin:80px 0;
+    white-space: nowrap;
+}
+.images li{
+    display: inline-block;
+    width: 40%;
+    margin: 20px 5%;
+}
+.images li img{
+    max-width: 100%;
+}
+
+ /* relative : the place of the positionned element stayes free
+ abslote : the place is like the elements is deleted , other elements take that place
+ fixed : so when u scroll tht elements stays visible in its place , for ex the header
+ stickey: is like a combination between a static position value and fixed value
+ ---An element with position: sticky; is positioned based on the user's scroll position.
+
+A sticky element toggles between relative and fixed, depending on the scroll position. 
+It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
+ */
+
+ section.join{
+    background-color: #f4F4F4;
+    text-align: center;
+    color: #4B4B4B;
+    padding: 60px 20px;
+ }
+.join h2{
+    font-size: 36px;
+ }
+ form input{
+    font-size: 20px;
+    border: 4px solid white;
+    border-radius: 30px;
+    margin: 20px 0;
+    padding: 10px 20px;
+}
+footer{
+    background-color: #f63232;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+/* PSEUDO ELEMENTS AND CLASSES */
+/* The :hover selector is used to select elements when you mouse over them. */
+nav li a:hover{
+    text-decoration: underline;
+    background-color: #feb614;
+    /*  so these elements when the mouse is over them they get aligned and colored */
+}
+.images li:hover{
+    position: relative;
+    top: -4px;
+}
+form input:focus{
+    border: 4px dashed gray;
+    outline: none;
+    /* that blue line when u click a form input */
+}
+form input:valid{
+    border: 4px solid green;
+    /* for ex here is an email input , when u type a right email , the border chages to green solid  */
+}
+
+article p::first-line{
+    font-weight: bold ;
+}
+article.join p::first-letter{
+    font-size: 1.2em;
+}
+p::selection{
+    background-color: #f63232;
+    color: white;
+}
+p::after{
+    content: '...';
+}
+
+
+
+/* PSEUDO ELEMENTS AND CLASSES 
+-The :hover selector is used to select elements when you mouse over them.
+-:valid 	input:valid 	Selects all <input> elements with a valid value
+:focus 	input:focus 	Selects the <input> element that has focus
+:first-child 	p:first-child 	Selects every <p> elements that is the first child of its parent
+
+::after 	p::after 	Insert content after every <p> element
+::before 	p::before 	Insert content before every <p> element
+::first-letter 	p::first-letter 	Selects the first letter of every <p> element
+::first-line 	p::first-line 	Selects the first line of every <p> element
+::selection 	p::selection 	Selects the portion of an element that is selected by a user
+*/
+
+
+/*//////////////////////////// RESPONSIVE ? MEDIA QUERies////////////////////////////////////////*/
+/* media queries : tell the browser to style an element at particulr viewport dimensions */
+@media screen and (max-width: 1000px) {
+    /* screen and (condition where to apply this styles) */
+    .banner .welcome h2{
+        /* position: absolute;
+        bottom: 30%;
+        left: 0;
+        color: white; */
+        /* background-color: #feb614; */
+        /* we don't need to rewrite the color , it is apllied deja, we only write the styles we want to change */
+        font-size: 20px;
+     }
+     nav li{
+        font-size: 18px;
+     }
+  }
+
+  @media screen and (max-width: 495px) {
+    /* screen and (condition where to apply this styles) */
+    .banner .welcome h2{
+        font-size: 10px;
+     }
+     nav li{
+        font-size: 13px;
+     }
+     .images li{
+        display: block;
+        margin: 0;
+        width: 100%;
+     }
+
+     header{
+        position: relative;
+     }
+     nav{
+        top: 0;
+     }
+  }
+
+  
+  @media screen and (max-width: 360px) {
+    /* screen and (condition where to apply this styles) */
+    .banner .welcome{
+         position: relative;
+        font-size: 10px;
+        text-align: center;
+        padding: 10px;
+     }
+     nav li{
+        font-size: 13px;
+     }
+     .banner .welcome br{
+        display: none;
+        /* to remove the br , between welcome and the span (mario world) */
+     }
+     .banner .welcome span{
+        font-size: 1em;
+     }
+     nav li{
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+     }
+  }
+
